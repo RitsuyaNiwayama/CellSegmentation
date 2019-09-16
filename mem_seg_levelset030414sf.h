@@ -71,15 +71,15 @@ extern char FILENAME_G[TOTFILENAME][MAX_CHAR_NUM];
 #define z_factor 1.00
 #define fin_valu 0.01
 #define INITIALTIME (1)
-#define ENDTIME (162)
+#define ENDTIME (66)
 //OFFTIME=INITIALTIME-1
 #define OFFTIME (0)
 #define max(a, b) ((a) > (b) ? (a) : (b))
 #define min(a, b) ((a) < (b) ? (a) : (b))
 //added 140711
 #define TIMELIMITITR (60*15)
-#define MAG_XY ( 260.0/90.0/4.0)
-#define MAG_Z (260.0/90.0)
+#define MAG_XY ( 1.0)
+#define MAG_Z ( 1.0)
 
 extern double dd_out[totalpixels];
 extern double d_phi[totalpixels];
