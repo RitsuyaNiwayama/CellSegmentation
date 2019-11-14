@@ -449,7 +449,7 @@ void SolveUsingSOR_SF(int my_rank,LL *Lz){
       g_time_t2=time(NULL);
       int dif_t=(int)(g_time_t2-g_time_t1);
       int d_TIMELIMITITR=TIMELIMITITR;
-      if(dif_t>TIMELIMITITR)goto CHINKO;
+      if(dif_t>TIMELIMITITR)goto NKO;
       int x,y,z,idx;
       ll_init(Lz); //begining of list;
       while(Lz->curr != NULL){
@@ -460,7 +460,7 @@ void SolveUsingSOR_SF(int my_rank,LL *Lz){
 	int i=z;
 	int j=y;
 	int k=x;
-	if(i<1||i>GRIDSIZE_Z-3||j<1||j>GRIDSIZE_Y-3||k<1||k>GRIDSIZE_X-3)goto CHINKO;
+	if(i<1||i>GRIDSIZE_Z-3||j<1||j>GRIDSIZE_Y-3||k<1||k>GRIDSIZE_X-3)goto NKO;
 	ll_step(Lz);
       }
       ll_init(Lz); //begining of list;
@@ -472,7 +472,7 @@ void SolveUsingSOR_SF(int my_rank,LL *Lz){
 	int i=z;
 	int j=y;
 	int k=x;
-	//if(i<1||i>GRIDSIZE_Z-3||j<1||j>GRIDSIZE_Y-3||k<1||k>GRIDSIZE_X-3)goto chinko;
+	//if(i<1||i>GRIDSIZE_Z-3||j<1||j>GRIDSIZE_Y-3||k<1||k>GRIDSIZE_X-3)goto nko;
 	//if(d_mask[Indix(i,j,k)]!=0.0)continue;
 	omg = om/Lz->curr->d_cce;
 	t1= (Lz->curr->d_cce*d_phi[Indix(i,j,k)]
@@ -502,7 +502,7 @@ void SolveUsingSOR_SF(int my_rank,LL *Lz){
   if(flagg==1){
     //  printf("notfin %d\n",my_rank);
   }
- CHINKO:int gggg=1;
+ NKO:int gggg=1;
 
 }
 
